@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>It's Street Coffee | Luxury Specialty Cafe | Pune, Maharashtra</title>
+  <meta name="description" content="Pune's premier artisanal coffee destination. Origin-roasted beans, Shaniwar Wada heritage cups, handcrafted frappes, and signature street brews at Talegaon Dabhade and 40+ locations across Maharashtra.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/brand/logo.png">
+
+  <!-- Google Typography: Playfair Display, Plus Jakarta Sans, Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Subtle Grain Texture -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Header Navigation -->
+  <header class="site-nav" id="mainNav">
+    <a href="#hero" class="nav-brand" aria-label="It's Street Coffee Homepage">
+      <img src="assets/brand/logo.png" alt="It's Street Coffee Logo" class="brand-emblem">
+      <div class="brand-text-col">
+        <span class="brand-name">It's Street Coffee</span>
+        <span class="brand-sub">Pune · Est. 2021</span>
+      </div>
+    </a>
+
+    <nav aria-label="Primary Navigation">
+      <ul class="nav-links">
+        <li><a href="#roastery">The Roastery</a></li>
+        <li><a href="#heritage">Pune Heritage</a></li>
+        <li><a href="#menu">Menu Archive</a></li>
+        <li><a href="#spotlight">Signature Blast</a></li>
+        <li><a href="#quiz">Taste Match</a></li>
+        <li><a href="#outlets">Outlets</a></li>
+        <li><a href="#franchise">Franchise</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <!-- Web Audio Coffee Lounge Player -->
+      <button class="audio-toggle-btn" id="audioToggle" type="button" aria-label="Toggle Cafe Ambient Sound">
+        <div class="audio-equalizer">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <span class="audio-label">Cafe Lounge</span>
+      </button>
+
+      <button class="btn-luxury" data-open-drawer="reservation" type="button">
+        Reserve Table
+      </button>
+
+      <button class="mobile-nav-toggle" id="mobileMenuBtn" type="button" aria-label="Open Mobile Menu" data-open-drawer="reservation">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- =====================================================================
+         1. PINNED 400VH SCROLL HERO STAGE
+         ===================================================================== -->
+    <section class="hero-scroll-container" id="hero" aria-label="Cinematic Coffee Journey">
+      <div class="hero-sticky-stage">
+        <!-- Canvas Scrub Visual Stage -->
+        <div class="hero-canvas-wrapper">
+          <canvas id="heroCanvas"></canvas>
+        </div>
+
+        <!-- Darkness Vignette for Text Legibility -->
+        <div class="hero-vignette" aria-hidden="true"></div>
+
+        <!-- Scroll Progress Ring Indicator -->
+        <div class="hero-loader" aria-hidden="true">
+          <svg class="hero-progress-ring" viewBox="0 0 36 36">
+            <circle cx="18" cy="18" r="14"></circle>
+            <circle class="ring-fill" cx="18" cy="18" r="14"></circle>
+          </svg>
+          <span>JOURNEY</span>
+        </div>
+
+        <!-- Caption Band 1: Small Batch Roasting -->
+        <article class="hero-caption-band band-1 active" data-band="1">
+          <span class="hero-supertitle">Western Ghats Origin</span>
+          <h1 class="hero-title">Small Batch Roasting Meets Sacred Soils</h1>
+          <p class="hero-desc">
+            Directly procured from high-elevation estates in Chikmagalur and Coorg. Every harvest is slowly roasted to bring forth rich roasted cacao notes and thick, velvet crema.
+          </p>
+        </article>
+
+        <!-- Caption Band 2: The 9-Bar Extraction -->
+        <article class="hero-caption-band band-2" data-band="2">
+          <span class="hero-supertitle">Precision Calibration</span>
+          <h2 class="hero-title">The Nine Bar Extraction of Pure Gold</h2>
+          <p class="hero-desc">
+            Dialed down to fractions of a gram. Freshly ground beans meet high-pressure thermal stability to extract sweet, golden honey crema without bitterness.
+          </p>
+        </article>
+
+        <!-- Caption Band 3: Artisanal Microfoam & Pour -->
+        <article class="hero-caption-band band-3" data-band="3">
+          <span class="hero-supertitle">Barista Artistry</span>
+          <h2 class="hero-title">Sculpted Microfoam and Architectural Pours</h2>
+          <p class="hero-desc">
+            Silky steamed dairy textured at 65 degrees Celsius. Poured with patient finesse to unite bold espresso shots with luscious, glossy texture in every handcrafted cup.
+          </p>
+        </article>
+
+        <!-- Caption Band 4: Pune Flagship Sanctuary -->
+        <article class="hero-caption-band band-4" data-band="4">
+          <span class="hero-supertitle">Pune, Maharashtra · Est. 2021</span>
+          <h2 class="hero-title">Luxury Craft Coffee Cultivated for Maharashtra</h2>
+          <p class="hero-desc">
+            From our flagship retreat in Talegaon Dabhade to 40+ destinations across India. Over 25.5 Lac cups served with uncompromised hospitality and authentic pride.
+          </p>
+          <div class="hero-cta-cluster">
+            <a href="#menu" class="btn-luxury">Explore Menu Archive</a>
+            <a href="#outlets" class="btn-luxury-outline">Visit Talegaon Flagship</a>
+          </div>
+        </article>
+
+        <!-- Scroll Wheel Prompt -->
+        <div class="scroll-indicator" aria-hidden="true">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+          <span>Scroll to Discover</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         2. METRICS & TRUST BANNER
+         ===================================================================== -->
+    <section class="metrics-section" id="metrics" aria-label="Brand Milestones">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <div class="metric-number">25.5L+</div>
+            <div class="metric-label">Cups Handcrafted</div>
+            <div class="metric-sub">Poured across Maharashtra</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">40+</div>
+            <div class="metric-label">Outlets Operating</div>
+            <div class="metric-sub">Pune, Nagpur, Goa and more</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">4.8★</div>
+            <div class="metric-label">Guest Rating</div>
+            <div class="metric-sub">Consistently reviewed on Google</div>
+          </div>
+          <div class="metric-item">
+            <div class="metric-number">2021</div>
+            <div class="metric-label">Founded in Pune</div>
+            <div class="metric-sub">Peshwa heritage in every cup</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. PUNE HERITAGE & THE ARTISANAL CRAFT
+         ===================================================================== -->
+    <section class="heritage-section" id="heritage" aria-label="Pune Heritage and Craftsmanship">
+      <div class="container">
+        <div class="heritage-grid">
+          <!-- Real Cafe Media: Authentic Shaniwar Wada Cup on Espresso Machine -->
+          <div class="heritage-media-card">
+            <img src="assets/brand/espresso-machine-pune-cup.jpg" alt="It's Street Coffee authentic Shaniwar Wada illustrated cup resting on a commercial espresso machine in Pune" class="heritage-img">
+            <div class="heritage-badge">
+              <div class="heritage-badge-title">Shaniwar Wada Emblem</div>
+              <div class="heritage-badge-sub">Printed on Every Authentic Cup</div>
+            </div>
+          </div>
+
+          <div class="heritage-content">
+            <span class="mono-tag">Rooted in Pune</span>
+            <h2 class="section-title">The Spirit of the Peshwas in Modern Coffee Culture</h2>
+            <p class="heritage-quote">
+              "We built It's Street Coffee so you never have to settle for industrialized instant powders or overpriced pretension. Real espresso, real milk, real craft."
+            </p>
+            <p class="heritage-body">
+              Every single takeaway cup at It's Street Coffee carries a tribute to Pune's iconic 18th-century palace fortress, Shaniwar Wada. Born in Bavdhan, Pune in 2021, our vision was simple yet radical: bring authentic, estate-grade espresso machine culture to every neighborhood street across Maharashtra without charging exorbitant five-star tariffs.
+            </p>
+
+            <div class="heritage-pillars">
+              <div class="pillar-item">
+                <div class="pillar-title">Direct Estate Sourcing</div>
+                <div class="pillar-desc">Grade-A Arabica and washed Robusta selected from high rain regions in southern India.</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-title">Italian High-Pressure Rigs</div>
+                <div class="pillar-desc">Dual boiler brass groupheads dialed to extract golden crema for every guest.</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-title">Accessible Luxury Pricing</div>
+                <div class="pillar-desc">True espresso from ₹79 and rich thick shakes from ₹139, crafted for the daily ritual.</div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-title">Talegaon Flagship Experience</div>
+                <div class="pillar-desc">Warm indoor and outdoor open-air seating for students, creators, and families.</div>
+              </div>
+            </div>
+
+            <a href="#outlets" class="btn-luxury">Explore Our Pune Outlets</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. INTERACTIVE ARTISANAL MENU ARCHIVE
+         ===================================================================== -->
+    <section class="menu-section" id="menu" aria-label="Full Coffee and Beverage Menu">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="mono-tag">Transparent Real Pricing</span>
+          <h2 class="section-title">The Handcrafted Menu Archive</h2>
+          <p class="section-subtitle">
+            Every item is freshly pulled or blended to order using pure whole milk, premium syrups, and fresh dark roasts. No artificial premixes.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="menu-tabs" role="tablist">
+          <button class="menu-tab-btn active" data-filter="all" type="button">All Creations</button>
+          <button class="menu-tab-btn" data-filter="classics" type="button">Classics</button>
+          <button class="menu-tab-btn" data-filter="dessert" type="button">Dessert Coffee</button>
+          <button class="menu-tab-btn" data-filter="iced" type="button">Iced & Cold</button>
+          <button class="menu-tab-btn" data-filter="frappes" type="button">Frappes</button>
+          <button class="menu-tab-btn" data-filter="smoothies" type="button">Smoothies</button>
+          <button class="menu-tab-btn" data-filter="refreshers" type="button">Refreshers</button>
+        </div>
+
+        <!-- Dynamic Menu Cards -->
+        <div class="menu-grid" id="menuGrid">
+          <!-- Item 1: Espresso -->
+          <article class="menu-card" data-category="classics">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/espresso-shot.jpg" alt="Artisanal Espresso Shot" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">Pure Origin</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Single Espresso</h3>
+                <span class="menu-card-price">₹79</span>
+              </div>
+              <p class="menu-card-desc">Concentrated 30ml pure extraction carrying hazelnut-toned crema and deep cocoa notes.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Hot · Bold · 30ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Single%20Espresso%20(₹79)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Cappuccino -->
+          <article class="menu-card" data-category="classics">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/cappuccino-art.jpg" alt="Classical Cappuccino with Latte Art" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">House Favorite</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Classical Cappuccino</h3>
+                <span class="menu-card-price">₹99</span>
+              </div>
+              <p class="menu-card-desc">Balanced double shot espresso crowned with velvety steamed milk foam and organic cocoa dust.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Hot · Creamy · 200ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Classical%20Cappuccino%20(₹99)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Cafe Latte -->
+          <article class="menu-card" data-category="classics">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/cappuccino-art.jpg" alt="Cafe Latte" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">Silky Smooth</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Cafe Latte</h3>
+                <span class="menu-card-price">₹109</span>
+              </div>
+              <p class="menu-card-desc">Gentle ratio of smooth dark roast and generous micro-textured warm milk for a comforting sip.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Hot · Mild · 240ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Cafe%20Latte%20(₹109)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Cafe Americano -->
+          <article class="menu-card" data-category="classics">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/espresso-shot.jpg" alt="Cafe Americano" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">Clean Crisp</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Cafe Americano</h3>
+                <span class="menu-card-price">₹89</span>
+              </div>
+              <p class="menu-card-desc">Double espresso drawn over purified hot mountain water to preserve subtle floral aromas.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Hot · Crisp · 220ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Cafe%20Americano%20(₹89)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Turkish Cappuccino -->
+          <article class="menu-card" data-category="dessert">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/cappuccino-art.jpg" alt="Turkish Cappuccino" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">Exotic Spice</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Turkish Cappuccino</h3>
+                <span class="menu-card-price">₹119</span>
+              </div>
+              <p class="menu-card-desc">Infused with aromatic cardamom and caramelized sweet notes, honoring Ottoman coffee traditions.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Hot · Spiced · 200ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Turkish%20Cappuccino%20(₹119)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Hazelnut Latte -->
+          <article class="menu-card" data-category="dessert">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/cappuccino-art.jpg" alt="Hazelnut Latte" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">Nutty Velvet</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Hazelnut Latte</h3>
+                <span class="menu-card-price">₹119</span>
+              </div>
+              <p class="menu-card-desc">Roasted Italian hazelnut infusion layered with dark espresso and glossy hot milk.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Hot · Sweet · 240ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Hazelnut%20Latte%20(₹119)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 7: Iced Americano -->
+          <article class="menu-card" data-category="iced">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/espresso-shot.jpg" alt="Iced Americano" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">On The Rocks</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Iced Americano</h3>
+                <span class="menu-card-price">₹99</span>
+              </div>
+              <p class="menu-card-desc">Bold espresso shaken vigorously over crystal clear ice cubes for a brisk, sugar-free energy surge.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Cold · Bold · 300ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Iced%20Americano%20(₹99)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 8: Mocha Frappe -->
+          <article class="menu-card" data-category="frappes">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/mocha-frappe.jpg" alt="Mocha Frappe" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">Decadent</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Mocha Frappe</h3>
+                <span class="menu-card-price">₹139</span>
+              </div>
+              <p class="menu-card-desc">Chilled espresso churned with rich Belgian chocolate fudge, fresh cream, and crushed ice.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Cold · Chilled · 350ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Mocha%20Frappe%20(₹139)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 9: Signature Street Blast -->
+          <article class="menu-card" data-category="frappes">
+            <div class="menu-card-img-wrap">
+              <img src="assets/brand/coffee-cup.png" alt="Signature Street Blast" class="menu-card-img" style="object-fit: contain; padding: 1.5rem;" loading="lazy">
+              <span class="menu-card-tag">Pune's Legend</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Street Blast</h3>
+                <span class="menu-card-price">₹139</span>
+              </div>
+              <p class="menu-card-desc">Our iconic creation. Double espresso blended with rich chocolate brownie and smooth vanilla ice cream.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Cold · Indulgent · 350ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Signature%20Street%20Blast%20(₹139)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 10: Blueberry Cookie Smoothie -->
+          <article class="menu-card" data-category="smoothies">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/blueberry-cookie-smoothie.jpg" alt="Blueberry Cookie Smoothie" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">Artisan Dessert</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Blueberry Cookie</h3>
+                <span class="menu-card-price">₹159</span>
+              </div>
+              <p class="menu-card-desc">Wild blueberry compote blended with baked butter cookies, fresh cream, and chilled milk.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Cold · Fruity · 350ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Blueberry%20Cookie%20Smoothie%20(₹159)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 11: Alphonso Mango Smoothie -->
+          <article class="menu-card" data-category="smoothies">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/alphonso-mango-smoothie.jpg" alt="Alphonso Mango Smoothie" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">Ratnagiri Gold</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Alphonso Mango</h3>
+                <span class="menu-card-price">₹139</span>
+              </div>
+              <p class="menu-card-desc">Luscious sun-ripened Alphonso mango pulp churned into a rich tropical indulgence.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Cold · Tropical · 350ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Alphonso%20Mango%20Smoothie%20(₹139)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 12: Mint Mojito -->
+          <article class="menu-card" data-category="refreshers">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/mint-mojito.jpg" alt="Fresh Mint Mojito" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">Botanical Crisp</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Fresh Mint Mojito</h3>
+                <span class="menu-card-price">₹119</span>
+              </div>
+              <p class="menu-card-desc">Bruised fresh mint sprigs, tangy key lime juice, and fine cane sugar topped with crisp soda.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Cold · Sparkling · 300ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Fresh%20Mint%20Mojito%20(₹119)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 13: Cool Blue Refresher -->
+          <article class="menu-card" data-category="refreshers">
+            <div class="menu-card-img-wrap">
+              <img src="assets/drinks/cool-blue.jpg" alt="Cool Blue Refresher" class="menu-card-img" loading="lazy">
+              <span class="menu-card-tag">Citrus Electric</span>
+            </div>
+            <div class="menu-card-body">
+              <div class="menu-card-header">
+                <h3 class="menu-card-name">Cool Blue Splash</h3>
+                <span class="menu-card-price">₹119</span>
+              </div>
+              <p class="menu-card-desc">Curacao citrus blend accented with tart lemon notes and chilled sparkling bubbles.</p>
+              <div class="menu-card-footer">
+                <span class="badge-profile">Cold · Citrus · 300ml</span>
+                <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20Cool%20Blue%20(₹119)%20from%20your%20Talegaon%20outlet." target="_blank" class="menu-order-btn">Order Cup →</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. FEATURED SPOTLIGHT: SIGNATURE STREET BLAST
+         ===================================================================== -->
+    <section class="spotlight-section" id="spotlight" aria-label="Signature Drink Spotlight">
+      <div class="container">
+        <div class="spotlight-card">
+          <div class="spotlight-cup-stage">
+            <div class="spotlight-glow" aria-hidden="true"></div>
+            <img src="assets/brand/coffee-cup.png" alt="Signature Street Blast cup presentation" class="spotlight-cup-img">
+          </div>
+
+          <div class="spotlight-content">
+            <span class="mono-tag">Maharashtra's Crowd Favorite</span>
+            <h2 class="section-title">The Legendary Street Blast</h2>
+            
+            <div class="spotlight-price-tag">
+              <span class="spotlight-price-num">₹139</span>
+              <span class="spotlight-price-note">All Taxes Included · 350ml Serving</span>
+            </div>
+
+            <p style="margin-bottom: 1.75rem; font-size: 1.05rem; line-height: 1.75; color: var(--text-secondary);">
+              Born from late-night experiments in our flagship kitchen, the Street Blast combines two full pulls of dark roast espresso with oven-baked chocolate fudge brownies and velvety vanilla ice cream. Thick enough to eat with a straw, rich enough to redefine what coffee can be.
+            </p>
+
+            <ul class="spotlight-features">
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Freshly pulled double shot dark roast espresso
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Hand-crumbled chocolate fudge brownie pieces
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Premium churned vanilla bean ice cream
+              </li>
+              <li>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Signature takeaway cup featuring Pune's Shaniwar Wada
+              </li>
+            </ul>
+
+            <a href="https://wa.me/919901503680?text=Hi%20It's%20Street%20Coffee,%20I%20would%20like%20to%20order%20the%20Signature%20Street%20Blast%20(₹139)%20from%20your%20Talegaon%20outlet." target="_blank" class="btn-luxury">
+              Order Street Blast on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. INTERACTIVE TASTE PROFILE QUIZ
+         ===================================================================== -->
+    <section class="taste-finder-section" id="quiz" aria-label="Interactive Beverage Finder">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="mono-tag">Interactive Recommendation</span>
+          <h2 class="section-title">Discover Your Coffee Match</h2>
+          <p class="section-subtitle">
+            Answer three quick questions to reveal your customized drink pairing from our artisanal menu.
+          </p>
+        </div>
+
+        <div class="quiz-container">
+          <div class="quiz-steps">
+            <!-- Step 1: Temperature -->
+            <div class="quiz-step" data-step="1">
+              <h3 class="quiz-step-title">1. What temperature calls to you right now?</h3>
+              <div class="quiz-options">
+                <button class="quiz-option-btn selected" data-type="temp" data-val="cold" type="button">
+                  Chilled and Iced
+                </button>
+                <button class="quiz-option-btn" data-type="temp" data-val="hot" type="button">
+                  Steaming and Hot
+                </button>
+                <button class="quiz-option-btn" data-type="temp" data-val="cold" type="button">
+                  Thick and Frozen
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2: Flavor Profile -->
+            <div class="quiz-step" data-step="2">
+              <h3 class="quiz-step-title">2. What flavour note best describes your mood?</h3>
+              <div class="quiz-options">
+                <button class="quiz-option-btn selected" data-type="flavor" data-val="rich" type="button">
+                  Decadent Brownie & Cocoa
+                </button>
+                <button class="quiz-option-btn" data-type="flavor" data-val="bold" type="button">
+                  Pure Roasted Coffee Body
+                </button>
+                <button class="quiz-option-btn" data-type="flavor" data-val="fruity" type="button">
+                  Mango or Berry Fruitiness
+                </button>
+                <button class="quiz-option-btn" data-type="flavor" data-val="crisp" type="button">
+                  Crisp Mint & Sparkling Citrus
+                </button>
+                <button class="quiz-option-btn" data-type="flavor" data-val="sweet" type="button">
+                  Warm Caramel & Hazelnut
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3: Sweetness -->
+            <div class="quiz-step" data-step="3">
+              <h3 class="quiz-step-title">3. Your sweetness preference:</h3>
+              <div class="quiz-options">
+                <button class="quiz-option-btn selected" data-type="sweetness" data-val="indulgent" type="button">
+                  Rich Dessert Indulgence
+                </button>
+                <button class="quiz-option-btn" data-type="sweetness" data-val="balanced" type="button">
+                  Balanced & Subtle
+                </button>
+                <button class="quiz-option-btn" data-type="sweetness" data-val="bold" type="button">
+                  Zero Sugar / Pure Roast
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Result Card -->
+          <div class="quiz-result-box" id="quizResult" role="region" aria-live="polite">
+            <!-- Populated via app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         7. FLAGSHIP OUTLET: TALEGAON DABHADE & MAHARASHTRA NETWORK
+         ===================================================================== -->
+    <section class="outlets-section" id="outlets" aria-label="Flagship Outlet and Locations">
+      <div class="container">
+        <!-- Talegaon Dabhade Flagship Card (Exact real data from user Google link) -->
+        <div class="talegaon-flagship-card">
+          <div class="talegaon-info">
+            <div class="talegaon-badge">Featured Flagship Destination</div>
+            <h2 class="talegaon-title">Talegaon Dabhade Sanctuary</h2>
+            <p style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+              Nestled near the scenic hills of Pune district, our Talegaon Dabhade outlet serves as a serene haven for highway travelers, local college students, and coffee purists alike.
+            </p>
+
+            <div class="talegaon-details">
+              <div class="detail-row">
+                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <div class="detail-text">
+                  <strong>Location & Address</strong>
+                  <span>Yashwant Nagar, Rajgurav Colony, Talegaon Dabhade, Pune, Maharashtra 410507</span>
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <div class="detail-text">
+                  <strong>Operating Hours</strong>
+                  <span>Open Daily from 10:00 AM to 11:00 PM</span>
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <div class="detail-text">
+                  <strong>Direct Direct Phone & WhatsApp</strong>
+                  <span>+91 99015 03680 / +91 91450 04080</span>
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <svg class="detail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <div class="detail-text">
+                  <strong>Guest Rating</strong>
+                  <span>4.8 / 5.0 Star Verified Google Reviews</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="talegaon-actions">
+              <a href="https://share.google/30SvpT7ioYXEqYmP7" target="_blank" rel="noopener noreferrer" class="btn-luxury">
+                Open in Google Maps
+              </a>
+              <button class="btn-luxury-outline" data-open-drawer="reservation" type="button">
+                Book a Table
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive Visual Map Card -->
+          <div class="talegaon-map-wrapper">
+            <iframe 
+              src="https://maps.google.com/maps?q=Yashwant+Nagar+Rajgurav+Colony+Talegaon+Dabhade+Pune&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Google Map of It's Street Coffee Talegaon Dabhade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Maharashtra Outlets Directory -->
+        <h3 class="outlets-sub-title">Part of 40+ Destinations Across Maharashtra</h3>
+        <div class="outlets-grid">
+          <div class="outlet-tile">
+            <h4 class="outlet-tile-name">Talegaon Dabhade</h4>
+            <div class="outlet-tile-city">Pune District (Flagship)</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Rajgurav Colony, Yashwant Nagar</p>
+            <div class="outlet-tile-rating">★ 4.8 Guest Score</div>
+          </div>
+
+          <div class="outlet-tile">
+            <h4 class="outlet-tile-name">Bavdhan Headquarters</h4>
+            <div class="outlet-tile-city">Pune Central</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Central Roastery & Training Academy</p>
+            <div class="outlet-tile-rating">★ 4.9 Guest Score</div>
+          </div>
+
+          <div class="outlet-tile">
+            <h4 class="outlet-tile-name">Kothrud</h4>
+            <div class="outlet-tile-city">Pune</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Near MIT College Road</p>
+            <div class="outlet-tile-rating">★ 4.8 Guest Score</div>
+          </div>
+
+          <div class="outlet-tile">
+            <h4 class="outlet-tile-name">DP Road</h4>
+            <div class="outlet-tile-city">Pune</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Aundh - Baner Link Corridor</p>
+            <div class="outlet-tile-rating">★ 4.7 Guest Score</div>
+          </div>
+
+          <div class="outlet-tile">
+            <h4 class="outlet-tile-name">Katraj</h4>
+            <div class="outlet-tile-city">Pune South</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Near Bharati Vidyapeeth Campus</p>
+            <div class="outlet-tile-rating">★ 4.8 Guest Score</div>
+          </div>
+
+          <div class="outlet-tile">
+            <h4 class="outlet-tile-name">Bajaj Nagar</h4>
+            <div class="outlet-tile-city">Nagpur</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Central Vidarbha Flagship</p>
+            <div class="outlet-tile-rating">★ 4.8 Guest Score</div>
+          </div>
+
+          <div class="outlet-tile">
+            <h4 class="outlet-tile-name">Mahabaleshwar</h4>
+            <div class="outlet-tile-city">Western Ghats</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Hill Station Scenic Outlet</p>
+            <div class="outlet-tile-rating">★ 4.9 Guest Score</div>
+          </div>
+
+          <div class="outlet-tile">
+            <h4 class="outlet-tile-name">Goa Coast</h4>
+            <div class="outlet-tile-city">North Goa</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Coastal Retreat Destination</p>
+            <div class="outlet-tile-rating">★ 4.9 Guest Score</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         8. FRANCHISE & PARTNERSHIP
+         ===================================================================== -->
+    <section class="franchise-section" id="franchise" aria-label="Franchise Opportunity">
+      <div class="container">
+        <div class="franchise-banner">
+          <span class="mono-tag">Franchise Partnership</span>
+          <h2 class="section-title">Bring It's Street Coffee to Your City</h2>
+          <p>
+            With over 40 profitable outlets and 25.5 Lac cups served, our proven turnkey espresso bar model equips partners with commercial Italian machinery, full barista academy training, and dependable supply chain logistics.
+          </p>
+          <button class="btn-luxury" data-open-drawer="franchise" type="button">
+            Request Franchise Prospectus
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       DRAWER MODAL: TABLE RESERVATION
+       ===================================================================== -->
+  <div class="drawer-backdrop" id="reservationDrawer" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="drawer-panel">
+      <button class="drawer-close" aria-label="Close Reservation Drawer">&times;</button>
+      <span class="mono-tag">Talegaon Flagship</span>
+      <h3 class="drawer-title">Reserve a Table</h3>
+      <p class="drawer-desc">Book your table at our Talegaon Dabhade cafe. Your request routes directly to our floor manager via WhatsApp.</p>
+
+      <form id="reservationForm">
+        <div class="form-group">
+          <label for="resName" class="form-label">Full Name</label>
+          <input type="text" id="resName" class="form-input" placeholder="e.g. Rahul Patil" required>
+        </div>
+
+        <div class="form-group">
+          <label for="resGuests" class="form-label">Number of Guests</label>
+          <select id="resGuests" class="form-select" required>
+            <option value="1">1 Person (Quiet Work / Study)</option>
+            <option value="2" selected>2 Persons</option>
+            <option value="3-4">3 to 4 Persons</option>
+            <option value="5-8">5 to 8 Persons (Group Lounge)</option>
+            <option value="8+">8+ Persons (Event Booking)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="resDate" class="form-label">Preferred Date</label>
+          <input type="date" id="resDate" class="form-input" required>
+        </div>
+
+        <div class="form-group">
+          <label for="resTime" class="form-label">Preferred Time Slot</label>
+          <select id="resTime" class="form-select" required>
+            <option value="11:00 AM">11:00 AM (Morning Roast)</option>
+            <option value="02:00 PM">02:00 PM (Afternoon Quiet)</option>
+            <option value="05:00 PM" selected>05:00 PM (Evening Buzz)</option>
+            <option value="08:00 PM">08:00 PM (Night Lounge)</option>
+            <option value="10:00 PM">10:00 PM (Late Night Sip)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="resNotes" class="form-label">Special Requests (Optional)</label>
+          <textarea id="resNotes" class="form-textarea" rows="3" placeholder="Indoor AC seating, outdoor terrace, celebratory cake, etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn-luxury" style="width: 100%;">
+          Send Reservation to WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       DRAWER MODAL: FRANCHISE INQUIRY
+       ===================================================================== -->
+  <div class="drawer-backdrop" id="franchiseDrawer" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="drawer-panel">
+      <button class="drawer-close" aria-label="Close Franchise Drawer">&times;</button>
+      <span class="mono-tag">Business Partnership</span>
+      <h3 class="drawer-title">Franchise Inquiry</h3>
+      <p class="drawer-desc">Join Maharashtra's premier specialty coffee movement. Connect with our corporate expansion team.</p>
+
+      <form id="franchiseForm">
+        <div class="form-group">
+          <label for="franName" class="form-label">Your Name</label>
+          <input type="text" id="franName" class="form-input" placeholder="e.g. Amit Sharma" required>
+        </div>
+
+        <div class="form-group">
+          <label for="franPhone" class="form-label">Mobile Number</label>
+          <input type="tel" id="franPhone" class="form-input" placeholder="+91 98765 43210" required>
+        </div>
+
+        <div class="form-group">
+          <label for="franCity" class="form-label">Target City / Locality</label>
+          <input type="text" id="franCity" class="form-input" placeholder="e.g. Pune, Navi Mumbai, Kolhapur" required>
+        </div>
+
+        <div class="form-group">
+          <label for="franBudget" class="form-label">Investment Bracket</label>
+          <select id="franBudget" class="form-select" required>
+            <option value="₹12L - ₹18L (Kiosk Model)">₹12L to ₹18L (Compact Kiosk)</option>
+            <option value="₹20L - ₹30L (Cafe Lounge)" selected>₹20L to ₹30L (Full High-Street Cafe)</option>
+            <option value="₹35L+ (Flagship Experience)">₹35L+ (Flagship Experience Center)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="franNotes" class="form-label">Commercial Property Details</label>
+          <textarea id="franNotes" class="form-textarea" rows="3" placeholder="Tell us if you already own or rent commercial space, floor area (sq. ft.), etc."></textarea>
+        </div>
+
+        <button type="submit" class="btn-luxury" style="width: 100%;">
+          Submit Franchise Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       FOOTER
+       ===================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4 class="footer-brand-title">It's Street Coffee</h4>
+          <p class="footer-brand-desc">
+            Pune's homegrown artisanal specialty coffee brand. Dedicated to uncompromising roast profiles, Italian brass extractions, and cultural pride in every Shaniwar Wada cup.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="#hero">The Origin</a></li>
+            <li><a href="#heritage">Shaniwar Wada Heritage</a></li>
+            <li><a href="#menu">Handcrafted Menu</a></li>
+            <li><a href="#spotlight">Signature Street Blast</a></li>
+            <li><a href="#quiz">Taste Match</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Flagship Outlet</div>
+          <ul class="footer-links">
+            <li><a href="https://share.google/30SvpT7ioYXEqYmP7" target="_blank" rel="noopener noreferrer">Talegaon Dabhade Map</a></li>
+            <li><a href="tel:+919901503680">+91 99015 03680</a></li>
+            <li><a href="tel:+919145004080">+91 91450 04080</a></li>
+            <li><a href="#outlets">40+ Maharashtra Locations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Opportunities</div>
+          <ul class="footer-links">
+            <li><a href="#" data-open-drawer="franchise">Franchise Partnership</a></li>
+            <li><a href="#" data-open-drawer="reservation">Table Reservation</a></li>
+            <li><a href="https://wa.me/919901503680" target="_blank">Corporate Orders</a></li>
+            <li><a href="https://itsstreetcoffee.com" target="_blank">Brand Portal</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 It's Street Coffee. All rights reserved. Talegaon Dabhade, Pune, Maharashtra.</div>
+        <div>Crafted with 10k-Websites Precision · Vanilla HTML / CSS / JavaScript</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client-side Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
